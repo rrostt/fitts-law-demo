@@ -228,7 +228,8 @@ const IDplot = ({data, onClick}) => {
       <div style={{position: 'absolute', bottom: '20%', right: 20}}>
         T = a + b * log(D/W)<br/>
         a = {R.intercept.toFixed(2)}<br/>
-        b = {R.slope.toFixed(2)}
+        b = {R.slope.toFixed(2)}<br/>
+        (R2 = {R.r2.toFixed(2)})
       </div>
     </Grow>
   </Flex>
@@ -247,7 +248,6 @@ class App extends Component {
   }
 
   componentDidMount () {
-    this.fetchData()
     window.addEventListener('keydown', this.keyDown)
   }
 
@@ -295,7 +295,7 @@ class App extends Component {
 
         <Section>
           <Flex dir='column' style={{ justifyContent: 'center'}}>
-            <Formula>T = a + b * log( 2D / W)</Formula>
+            <Formula>T = a + b * log(2D / W)</Formula>
           </Flex>
         </Section>
 
