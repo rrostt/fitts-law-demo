@@ -303,6 +303,12 @@ class App extends Component {
           <IDplot data={this.state.data}></IDplot>
         </Section>
 
+        <Section background='#ffe8bd'>
+          <Flex dir='column' style={{ justifyContent: 'center'}}>
+            <H1>http://fitts.rost.me/</H1>
+          </Flex>
+        </Section>
+
         <GlobalStyle />
       </AppStyled>
     )
